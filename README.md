@@ -28,7 +28,14 @@ To use these playbooks you need to install the **VAST PythonSDK**: <link>https:/
 pip install vastpy
 ```
 
+Create a .env file with the following variables:
+```
+API_USERNAME = <username>
+API_PASSWORD = <password>
+VMS_IP = <VMS IP>
+```
 **Tested with:**
+VAST release-4.7.0
 
 
 ----
