@@ -34,10 +34,10 @@ def main():
         print(f"Policy {viewpolicy_name} already exist in Tenant {tenant_name}!")
         exit(1)
 
-    viewpolicy = client.viewpolicies.post(name=viewpolicy_name, flavor='NFS', tenant_id=tenant['id'])
-    if viewpolicy:
+    viewpolicy_list = client.viewpolicies.post(name=viewpolicy_name, flavor='NFS', tenant_id=tenant['id'])
+    if viewpolicy_list:
         print(f"Viewpolicy {viewpolicy_name} created in Tenant {tenant_name}!")
-    print(viewpolicy)
+    print(viewpolicy_list)
 
 
 
