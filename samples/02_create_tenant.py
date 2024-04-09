@@ -19,6 +19,14 @@ def main():
     result = client.tenants.post(name=tenant_name)
     print(result)
 
+    tenant = client.tenants.get(name=tenant_name)
+    if not tenant:
+        print(f"Tenant {tenant_name} doesn't exist. Something went wrong...")
+        print(tenant)
+        exit(1)
+
+    print(f"Tenant {tenant_name} created!")
+
 
 
 
